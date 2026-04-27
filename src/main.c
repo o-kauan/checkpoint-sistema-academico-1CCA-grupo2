@@ -37,14 +37,18 @@ float nota1, nota2, nota3;
 if (opcao == 1) {
     printf("Opcao 1 selecionada: Inserir Notas\n");
 
-    printf("\nDigite a primeira nota: ");
+    printf("\nDigite a primeira nota (0 a 10): ");
     scanf("%f", &nota1);
 
-    printf("Digite a segunda nota: ");
+    printf("Digite a segunda nota (0 a 10): ");
     scanf("%f", &nota2);
 
-    printf("Digite a terceira nota: ");
+    printf("Digite a terceira nota (0 a 10): ");
     scanf("%f", &nota3);
+
+    if(nota1 < 0 || nota1 > 10){
+    printf("Nota invalida!\n");
+}
 
     printf("\nNotas inseridas com sucesso!\n");
 }
