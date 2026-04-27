@@ -11,7 +11,13 @@ int main() {
     printf("\n5 - Calcular Derivada ");
     printf("\n6 - Sair ");
     printf("\n\n Escolha uma Opcao: ");
-
+    int opcao;
+    scanf("%d", &opcao);
+    if (opcao == 1) {
+        printf("Opcao 1 selecionada: Inserir Notas\n");
+    } else if (opcao == 2) {
+        printf("Opcao 2 selecionada: Calcular Media\n");
+    }
     
     return 0;
 }
