@@ -1,7 +1,4 @@
 #include<stdio.h>
-void calcularMediaMenu();
-void verificarSituacaoMenu();
-
 void derivada(){
     float a, b ,c;
 
@@ -18,6 +15,10 @@ void derivada(){
 }
 
 int main() {
+    float nota1 = -1, nota2 = -1, nota3 = -1;
+    float medias = -1;
+    int opcao;
+    menu:
     printf("===========================================\n");
     printf("            SISTEMA EQUIPE 2               \n");
     printf("===========================================\n");
@@ -27,76 +28,153 @@ int main() {
     printf("\n4 - Exibir Resultado ");
     printf("\n5 - Calcular Derivada ");
     printf("\n6 - Sair ");
-    escolher:
     printf("\n\n Escolha uma Opcao: ");
-    int opcao;
     scanf("%d", &opcao);
-    if (opcao == 1) {
-        printf("Opcao 1 selecionada: Inserir Notas\n");
-    int opcao;
-float nota1, nota2, nota3;
 
 if (opcao == 1) {
-    printf("Opcao 1 selecionada: Inserir Notas\n");
-
-    printf("\nDigite a primeira nota (0 a 10): ");
-    scanf("%f", &nota1);
-
-    printf("Digite a segunda nota (0 a 10): ");
-    scanf("%f", &nota2);
-
-    printf("Digite a terceira nota (0 a 10): ");
-    scanf("%f", &nota3);
-
-    if(nota1 < 0 || nota1 > 10){
-    printf("Nota invalida!\n");
-}
-
-    printf("\nNotas inseridas com sucesso!\n");
-}
-    } else if (opcao == 2) {
-        printf("Opcao 2 selecionada: Calcular Media\n");
-    } else if (opcao == 3) {
-        printf("Opcao 3 selecionada: Verificar Situacao\n");
-    } else if (opcao == 4) {
-        printf("Opcao 4 selecionada: Exibir Resultado\n");
-    } else if (opcao == 5) {
+        printf("\n- Opcao 1 selecionada:\n");
+        printf("- INSERIR NOTAS\n");
+        do {
+            printf("\nDigite a primeira nota (0 a 10): ");
+            scanf("%f", &nota1);
+            if (nota1 < 0  || nota1 > 10){
+                printf("Erro! Insira uma nota valida!");
+                }
+            } while ((nota1 < 0) || (nota1 > 10));          
+        do {
+            printf("\nDigite a segunda nota (0 a 10): ");
+            scanf("%f", &nota2);
+            if (nota2 < 0  || nota2 > 10){
+                printf("Erro! Insira uma nota valida!");
+                }
+            } while ((nota2 < 0) || (nota2 > 10));  
+        do {
+            printf("\nDigite a terceira nota (0 a 10): ");
+            scanf("%f", &nota3);
+            if (nota3 < 0  || nota3 > 10){
+                printf("Erro! Insira uma nota valida!");
+                }
+            }while ((nota3 < 0) || (nota3 > 10));
+        printf("\nNotas atribuidas com sucesso!");
+        printf("\nCaso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
+    }else if (opcao == 2) {
+        printf("\n- Opcao 2 selecionada:\n");
+        printf("- CALCULAR MEDIA\n");
+        if (nota1 < 0 || nota2 < 0 || nota3 < 0){
+            printf("Nao e possivel calcular a media sem notas!\n");
+            printf("Caso queira voltar ao menu, digite 1: \n");
+            scanf("%d", &opcao);
+            switch (opcao){
+                case 1:
+                goto menu;
+                default:
+                break;
+        }
+            }
+        medias = (nota1 + nota2 + nota3) / 3;
+        printf("Media calculada com sucesso!\n");
+        printf("Media das notas = %.2f", medias);
+        printf("\nCaso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
+    }else if (opcao == 3){
+        printf("\n- Opcao 3 selecionada:\n");
+        printf("- VERIFICAR SITUACAO\n");
+        if (medias < 0){
+            printf("Erro: A media ainda não foi calculada!\n");
+            printf("Selecione a opcao 2 no menu para defini-las!\n");
+        }else if (medias < 6){
+            printf("SITUACAO DO ALUNO: REPROVADO\n");
+        }else{
+            printf("SITUACAO DO ALUNO: APROVADO\n");
+        }
+        printf("Caso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
+    }else if (opcao == 4) {
+        printf("\n- Opcao 4 selecionada:\n");
+        printf("- EXIBIR RESULTADO\n");
+        if (nota1 < 0 || nota2 < 0 || nota3 <0){
+            printf("---------------------\n");
+            printf("NOTA 1: NAO ATRIBUIDA\n");
+            printf("NOTA 2: NAO ATRIBUIDA\n");
+            printf("NOTA 3: NAO ATRIBUIDA\n");
+            printf("---------------------\n");
+        }else{
+            printf("---------------------\n");
+            printf("NOTA 1: %.2f", nota1);
+            printf("\nNOTA 2: %.2f", nota2);
+            printf("\nNOTA 3: %.2f", nota3);
+            printf("\n---------------------\n");
+        }
+        if (medias < 0){
+        printf("MEDIA: NAO ATRIBUIDA\n");
+        printf("---------------------\n");
+        }else{
+            printf("MEDIA: %.2f", medias);
+            printf("\n---------------------\n");
+        }
+        if (medias < 0){
+            printf("SITUACAO: NAO ATRIBUIDA\n");
+            printf("---------------------\n");
+        }else if (medias < 6){
+            printf("SITUACAO: REPROVADO\n");
+            printf("---------------------\n");
+        }else{
+            printf("SITUACAO: APROVADO\n");
+            printf("---------------------\n");
+        }
+        printf("Caso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
+    }else if (opcao == 5) {
         printf("Opcao 5 selecionada: Calcular Derivada\n");
+        derivada();
+        printf("Caso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
     } else if (opcao == 6) {
         printf("Opcao 6 selecionada: Sair\n");
+        printf("Ate Logo!");
+        return 0;
     } else {
         printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
-        goto escolher;
+        printf("Caso queira voltar ao menu, digite 1: \n");
+        scanf("%d", &opcao);
+        switch (opcao){
+            case 1:
+            goto menu;
+            default:
+            break;
+        }
     }
     
     return 0;
-}
-
-void calcularMediaMenu() {
-    float n1, n2, media;
-
-    printf("\nDigite a primeira nota: ");
-    scanf("%f", &n1);
-
-    printf("Digite a segunda nota: ");
-    scanf("%f", &n2);
-
-    media = (n1 + n2) / 2;
-
-    printf("\nMedia: %.2f\n", media);
-}
-
-void verificarSituacaoMenu() {
-    float media;
-
-    printf("\nDigite a media: ");
-    scanf("%f", &media);
-
-    if (media >= 7) {
-        printf("Resultado: Aprovado\n");
-    } else if (media >= 5) {
-        printf("Resultado: Recuperacao\n");
-    } else {
-        printf("Resultado: Reprovado\n");
-    }
 }
