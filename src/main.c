@@ -31,6 +31,10 @@ if (opcao == 1) {
     printf("Digite a terceira nota (0 a 10): ");
     scanf("%f", &nota3);
 
+    if(nota1 < 0 || nota1 > 10){
+    printf("Nota invalida!\n");
+}
+
     printf("\nNotas inseridas com sucesso!\n");
 }
     } else if (opcao == 2) {
