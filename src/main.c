@@ -35,8 +35,6 @@ if (opcao == 1) {
 }
     } else if (opcao == 2) {
         printf("Opcao 2 selecionada: Calcular Media\n");
-<<<<<<< HEAD
-=======
     } else if (opcao == 3) {
         printf("Opcao 3 selecionada: Verificar Situacao\n");
     } else if (opcao == 4) {
@@ -48,7 +46,6 @@ if (opcao == 1) {
     } else {
         printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
         goto escolher;
->>>>>>> 98512ff8267bdf7cdaf9936
     }
     
     return 0;
