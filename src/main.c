@@ -10,6 +10,7 @@ int main() {
     printf("\n4 - Exibir Resultado ");
     printf("\n5 - Calcular Derivada ");
     printf("\n6 - Sair ");
+    escolher:
     printf("\n\n Escolha uma Opcao: ");
     int opcao;
     scanf("%d", &opcao);
@@ -34,6 +35,20 @@ if (opcao == 1) {
 }
     } else if (opcao == 2) {
         printf("Opcao 2 selecionada: Calcular Media\n");
+<<<<<<< HEAD
+=======
+    } else if (opcao == 3) {
+        printf("Opcao 3 selecionada: Verificar Situacao\n");
+    } else if (opcao == 4) {
+        printf("Opcao 4 selecionada: Exibir Resultado\n");
+    } else if (opcao == 5) {
+        printf("Opcao 5 selecionada: Calcular Derivada\n");
+    } else if (opcao == 6) {
+        printf("Opcao 6 selecionada: Sair\n");
+    } else {
+        printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
+        goto escolher;
+>>>>>>> 98512ff8267bdf7cdaf9936ededa0f98d516b080
     }
     
     return 0;
