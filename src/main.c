@@ -21,6 +21,12 @@ int main() {
         printf("Opcao 3 selecionada: Verificar Situacao\n");
     } else if (opcao == 4) {
         printf("Opcao 4 selecionada: Exibir Resultado\n");
+    } else if (opcao == 5) {
+        printf("Opcao 5 selecionada: Calcular Derivada\n");
+    } else if (opcao == 6) {
+        printf("Opcao 6 selecionada: Sair\n");
+    } else {
+        printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
     }
 
     
