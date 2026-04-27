@@ -17,7 +17,12 @@ int main() {
         printf("Opcao 1 selecionada: Inserir Notas\n");
     } else if (opcao == 2) {
         printf("Opcao 2 selecionada: Calcular Media\n");
+    } else if (opcao == 3) {
+        printf("Opcao 3 selecionada: Verificar Situacao\n");
+    } else if (opcao == 4) {
+        printf("Opcao 4 selecionada: Exibir Resultado\n");
     }
+
     
     return 0;
 }
