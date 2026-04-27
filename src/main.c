@@ -48,7 +48,7 @@ if (opcao == 1) {
     } else {
         printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
         goto escolher;
->>>>>>> 98512ff8267bdf7cdaf9936ededa0f98d516b080
+>>>>>>> 98512ff8267bdf7cdaf9936
     }
     
     return 0;
