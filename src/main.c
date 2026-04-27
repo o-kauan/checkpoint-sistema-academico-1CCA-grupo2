@@ -1,4 +1,6 @@
 #include<stdio.h>
+void calcularMediaMenu();
+void verificarSituacaoMenu();
 
 void derivada(){
     float a, b ,c;
@@ -68,4 +70,33 @@ if (opcao == 1) {
     }
     
     return 0;
+}
+
+void calcularMediaMenu() {
+    float n1, n2, media;
+
+    printf("\nDigite a primeira nota: ");
+    scanf("%f", &n1);
+
+    printf("Digite a segunda nota: ");
+    scanf("%f", &n2);
+
+    media = (n1 + n2) / 2;
+
+    printf("\nMedia: %.2f\n", media);
+}
+
+void verificarSituacaoMenu() {
+    float media;
+
+    printf("\nDigite a media: ");
+    scanf("%f", &media);
+
+    if (media >= 7) {
+        printf("Resultado: Aprovado\n");
+    } else if (media >= 5) {
+        printf("Resultado: Recuperacao\n");
+    } else {
+        printf("Resultado: Reprovado\n");
+    }
 }
