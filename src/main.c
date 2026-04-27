@@ -9,6 +9,10 @@ void derivada(){
     scanf("%f", &b);
     printf("\nDigite o coeficiente c: ");
     scanf("%f", &c);
+
+    float novo_termo_a = 2 * a;
+    printf("\nFuncao original: f(x) = %.2fx^2 + %.2fx + %.2f", a, b, c);
+    printf("\nDerivada: f'(x) = %.2fx + %.2f\n", novo_termo_a, b);
 }
 
 int main() {
