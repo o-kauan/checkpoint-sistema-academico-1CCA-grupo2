@@ -10,6 +10,7 @@ int main() {
     printf("\n4 - Exibir Resultado ");
     printf("\n5 - Calcular Derivada ");
     printf("\n6 - Sair ");
+    escolher:
     printf("\n\n Escolha uma Opcao: ");
     int opcao;
     scanf("%d", &opcao);
@@ -27,6 +28,7 @@ int main() {
         printf("Opcao 6 selecionada: Sair\n");
     } else {
         printf("Opcao invalida. Por favor, escolha uma opcao entre 1 e 6.\n");
+        goto escolher;
     }
 
     
